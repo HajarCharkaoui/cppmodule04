@@ -1,0 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/26 11:51:07 by hacharka          #+#    #+#             */
+/*   Updated: 2026/02/26 13:09:19 by hacharka         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Cat.h"
+
+
+Cat::Cat()
+{
+	std::cout <<"Cat constructor called!"<<std::endl;
+	type = "Cat";
+}
+
+Cat::~Cat()
+{
+	std::cout<<"Cat destructor called!"<<std::endl;
+}
+
+Cat::Cat(const Cat& other)
+{
+	std::cout<<"Cat copy constructor called!"<<std::endl;
+	*this = other;
+}
+
+Cat&	Cat::operator=(const Cat& other)
+{
+	std::cout <<"Cat assignment operator called!"<<std::endl;
+	if (this != &other)
+	{
+		this->type = other.type;
+	}
+	return *this;
+}
+
+void	Cat::makeSound() const
+{
+	std::cout <<"Meow!"<<std::endl;
+}
