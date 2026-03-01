@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.h                                              :+:      :+:    :+:   */
+/*   WrongCat.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 11:50:46 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/27 12:09:18 by hacharka         ###   ########.fr       */
+/*   Created: 2026/02/26 14:06:54 by hacharka          #+#    #+#             */
+/*   Updated: 2026/02/26 14:11:34 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#ifndef WRONGCAT_H
+#define WRONGCAT_H
 
-#include "Animal.h"
-#include "Brain.h"
+#include "WrongAnimal.h"
 
-class Dog : public Animal
+class WrongCat : public WrongAnimal
 {
-	private:
-		Brain	*dog_ideas;
 	public:
-		Dog();
-		~Dog();
-		Dog(const Dog& other);
-		Dog&	operator=(const Dog& other);
+		WrongCat();
+		~WrongCat();
+		WrongCat(const WrongCat& other);
+		WrongCat&	operator=(const WrongCat& other);
 		void	makeSound() const;
-		Brain*	getBrain() const;
-		void	setBrain(Brain* new_brain);
 };
 #endif

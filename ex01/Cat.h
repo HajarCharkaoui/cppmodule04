@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 11:51:00 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/26 15:23:09 by hacharka         ###   ########.fr       */
+/*   Updated: 2026/02/27 12:49:55 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,7 @@ class Cat : public Animal
 		Cat(const Cat& other);
 		Cat&	operator=(const Cat& other);
 		void	makeSound() const;
+		Brain*	getBrain() const;
+		void	setBrain(Brain* new_brain);
 };
 #endif

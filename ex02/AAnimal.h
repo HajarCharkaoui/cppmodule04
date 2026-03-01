@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.h                                              :+:      :+:    :+:   */
+/*   AAnimal.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 11:50:46 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/27 12:09:18 by hacharka         ###   ########.fr       */
+/*   Created: 2026/02/26 11:51:12 by hacharka          #+#    #+#             */
+/*   Updated: 2026/02/27 14:08:16 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#ifndef AANIMAL_H
+#define AANIMAL_H
 
-#include "Animal.h"
-#include "Brain.h"
+#include <iostream>
 
-class Dog : public Animal
-{
-	private:
-		Brain	*dog_ideas;
+class AAnimal{
+	protected:
+		std::string type;
 	public:
-		Dog();
-		~Dog();
-		Dog(const Dog& other);
-		Dog&	operator=(const Dog& other);
-		void	makeSound() const;
-		Brain*	getBrain() const;
-		void	setBrain(Brain* new_brain);
+		AAnimal();
+		virtual ~AAnimal();
+		AAnimal(const AAnimal& other);
+		AAnimal&	operator=(const AAnimal& other);
+		std::string	getType() const;
+		virtual void	makeSound() const = 0;
 };
 #endif

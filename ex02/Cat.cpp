@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 11:51:07 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/27 12:49:47 by hacharka         ###   ########.fr       */
+/*   Updated: 2026/02/27 14:12:58 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Cat::~Cat()
 	delete	cat_ideas;
 }
 
-Cat::Cat(const Cat& other) : Animal(other)
+Cat::Cat(const Cat& other) : AAnimal(other)
 {
 	std::cout<<"Cat copy constructor called!"<<std::endl;
 	this->cat_ideas = NULL;

@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.h                                              :+:      :+:    :+:   */
+/*   IMateriaSource.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 11:50:46 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/27 12:09:18 by hacharka         ###   ########.fr       */
+/*   Created: 2026/03/01 17:11:46 by hacharka          #+#    #+#             */
+/*   Updated: 2026/03/01 17:29:25 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#include "IMateriaSource.h"
 
-#include "Animal.h"
-#include "Brain.h"
 
-class Dog : public Animal
-{
-	private:
-		Brain	*dog_ideas;
-	public:
-		Dog();
-		~Dog();
-		Dog(const Dog& other);
-		Dog&	operator=(const Dog& other);
-		void	makeSound() const;
-		Brain*	getBrain() const;
-		void	setBrain(Brain* new_brain);
-};
-#endif
+IMateriaSource::~IMateriaSource() {}
+
+void IMateriaSource::learnMateria(AMateria* m) {}
+
+AMateria* IMateriaSource::createMateria(std::string const & type) {}

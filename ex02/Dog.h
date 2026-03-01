@@ -6,17 +6,17 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 11:50:46 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/27 12:09:18 by hacharka         ###   ########.fr       */
+/*   Updated: 2026/02/27 14:08:57 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_H
 #define DOG_H
 
-#include "Animal.h"
+#include "AAnimal.h"
 #include "Brain.h"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 	private:
 		Brain	*dog_ideas;

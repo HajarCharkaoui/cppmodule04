@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 11:51:26 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/26 15:41:23 by hacharka         ###   ########.fr       */
+/*   Updated: 2026/02/27 13:56:56 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@
 
 int main()
 {
-    const int size = 4;
-    Animal* shelter[size];
+	const int size = 4;
+	Animal* shelter[size];
 
-    // 1. Creer Array: nuss klab, nuss mchach
-    std::cout << "--- CREATING SHELTER ---" << std::endl;
+	std::cout << "--- CREATING SHELTER ---" << std::endl;
 	for (int i = 0; i < size / 2; i++)
 		shelter[i] = new Dog();
 	for (int i = size / 2; i < size; i++)
@@ -32,6 +31,18 @@ int main()
 	Cat basic;
 	{
 		Cat tmp = basic;
+		std::cout << basic.getType() << std::endl;
+		Brain	*ideas = new Brain();
+		std::cout <<"Address: " << &ideas <<std::endl;
+		ideas->setIdeas(0, "First idea!");
+		ideas->setIdeas(1, "Second idea!");
+		ideas->setIdeas(2, "Third idea!");
+		ideas->setIdeas(3, "Fourth idea!");
+		basic.setBrain(ideas);
+		Brain*	visi = basic.getBrain();
+		for (int i = 0; i < 4; i++)
+			std::cout<<visi->getIdeas(i)<< std::endl;
+		
 	}
 
 	std::cout << "Basic is still alive after tmp is destroyed!" << std::endl;
@@ -39,6 +50,5 @@ int main()
 	std::cout << "\n--- CLEANING UP ---" << std::endl;
 	for (int i = 0; i < size; i++)
 		delete shelter[i];
-
 	return 0;
 }

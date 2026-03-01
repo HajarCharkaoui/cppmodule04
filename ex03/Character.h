@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.h                                              :+:      :+:    :+:   */
+/*   Character.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/26 11:50:46 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/27 12:09:18 by hacharka         ###   ########.fr       */
+/*   Created: 2026/02/27 19:42:23 by hacharka          #+#    #+#             */
+/*   Updated: 2026/03/01 16:19:14 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-#define DOG_H
+#ifndef CHARACTER_H
+#define CHARACTER_H
 
-#include "Animal.h"
-#include "Brain.h"
+#include "ICharacter.h"
 
-class Dog : public Animal
-{
+class Character : public ICharacter{
 	private:
-		Brain	*dog_ideas;
+		std::string	_name;
+		AMateria*	_inventory[4];
 	public:
-		Dog();
-		~Dog();
-		Dog(const Dog& other);
-		Dog&	operator=(const Dog& other);
-		void	makeSound() const;
-		Brain*	getBrain() const;
-		void	setBrain(Brain* new_brain);
+		Character();
+		~Character();
+		Character(std::string name);
+		Character(const Character& other);
+		Character&	operator=(const Character& other);
+		std::string	const & getName();
+		void	equip(AMateria* m);
+		void	unequip(int idx);
+		void	use(int idx, ICharacter& target);
+		
 };
 #endif
