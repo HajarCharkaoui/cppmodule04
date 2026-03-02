@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 14:43:50 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/27 16:56:44 by hacharka         ###   ########.fr       */
+/*   Updated: 2026/03/02 11:18:17 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ AMateria&	AMateria::operator=(const AMateria& other)
 std::string const & AMateria::getType() const{
 	return this->_type;
 }
-
-AMateria* AMateria::clone() const {}
 
 void AMateria::use(ICharacter& target){
 	(void)target;

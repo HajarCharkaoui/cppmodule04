@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 14:53:12 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/27 19:36:57 by hacharka         ###   ########.fr       */
+/*   Updated: 2026/03/02 11:12:42 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define ICHARACTER_H
 
 #include "AMateria.h"
+
+class AMateria;
 
 class ICharacter
 {
@@ -24,4 +26,4 @@ class ICharacter
 	virtual void unequip(int idx) = 0;
 	virtual void use(int idx, ICharacter& target) = 0;
 };
-#endif
+#endif 

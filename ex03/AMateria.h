@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 14:43:43 by hacharka          #+#    #+#             */
-/*   Updated: 2026/02/27 16:56:28 by hacharka         ###   ########.fr       */
+/*   Updated: 2026/03/02 11:19:04 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 #include <iostream>
 #include "ICharacter.h"
 
+class ICharacter;
+
 class AMateria{
 	protected:
-		std::string	const & _type;
+		std::string	_type;
 	public:
 		AMateria();
 		AMateria(std::string const & type);

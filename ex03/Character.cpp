@@ -6,7 +6,7 @@
 /*   By: hacharka <hacharka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 19:42:27 by hacharka          #+#    #+#             */
-/*   Updated: 2026/03/01 17:05:17 by hacharka         ###   ########.fr       */
+/*   Updated: 2026/03/02 11:22:32 by hacharka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,19 @@ Character::Character() {}
 
 Character::Character(std::string name) : _name(name)
 {
-	std::cout <<"Character constructor called!"<<std::endl;
 	for (int i = 0; i < 4; i++)
 		this->_inventory[i] = NULL;
 }
 
 Character::~Character()
 {
-	std::cout <<"Character destructor called!"<<std::endl;
 }
 
 Character::Character(const Character& other) : ICharacter(other){
-	std::cout <<"Character copy constructor called!"<<std::endl;
 	*this = other;
 }
 
 Character&	Character::operator=(const Character& other){
-	std::cout <<"Character assignment operator called!"<<std::endl;
 	if (this != &other)
 	{
 		this->_name = other._name;
@@ -51,7 +47,7 @@ Character&	Character::operator=(const Character& other){
 	return *this;
 }
 
-std::string	const & Character::getName()
+std::string	const & Character::getName() const
 {
 	return this->_name;
 }
